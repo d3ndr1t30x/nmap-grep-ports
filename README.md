@@ -5,11 +5,11 @@ Handy bash one liner to grep all port numbers from an Nmap output file and print
 
 Breakdown of the Command:
 
-```cat nmap/scan1.nmap: Reads the Nmap output file.
-grep -oP '^\d+/tcp': Uses grep with Perl-compatible regex (-P) to extract lines starting with port numbers followed by /tcp.
-awk -F/ '{print $1}': Splits the output by / and prints the first part (the port number).
-tr '\n' ',': Translates newlines into commas.
-sed 's/,$/\n/': Uses sed to remove the trailing comma and replace it with a newline.```
+```cat nmap/scan1.nmap```: Reads the Nmap output file.
+```grep -oP '^\d+/tcp'```: Uses grep with Perl-compatible regex (-P) to extract lines starting with port numbers followed by /tcp.
+```awk -F/ '{print $1}'```: Splits the output by / and prints the first part (the port number).
+```tr '\n' ','```: Translates newlines into commas.
+```sed 's/,$/\n/'```: Uses sed to remove the trailing comma and replace it with a newline.
 
 Example Output:
 
