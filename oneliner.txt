@@ -1,0 +1,1 @@
+cat nmap/scan1.nmap | grep -oP '^\d+/tcp' | awk -F/ '{print $1}' | tr '\n' ',' | sed 's/,$/\n/'
